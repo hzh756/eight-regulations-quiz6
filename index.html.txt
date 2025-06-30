@@ -1,0 +1,1879 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深入贯彻中央八项规定精神学习教育知识竞赛在线题库</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f8f0f0 0%, #e6e1e1 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #d9c7c7;
+        }
+        
+        /* 头部样式 */
+        header {
+            background: linear-gradient(90deg, #8b0000 0%, #c00000 100%);
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.4;
+            font-family: 'Noto Serif SC', serif;
+        }
+        
+        .subtitle {
+            font-size: 1.15rem;
+            opacity: 0.92;
+            max-width: 700px;
+            margin: 10px auto 0;
+            padding: 8px 0;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .header-icon {
+            position: absolute;
+            top: 25px;
+            right: 30px;
+            font-size: 2.8rem;
+            opacity: 0.3;
+            color: #fff;
+        }
+        
+        .header-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.2;
+            z-index: 1;
+        }
+        
+        /* 控制区域 */
+        .controls {
+            display: flex;
+            padding: 15px 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #eee;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            padding: 8px 18px;
+            width: 400px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .search-box:focus-within {
+            box-shadow: 0 0 0 3px rgba(192, 0, 0, 0.2);
+            border-color: #c00000;
+        }
+        
+        .search-box input {
+            border: none;
+            outline: none;
+            padding: 8px;
+            width: 100%;
+            background: transparent;
+            font-size: 0.95rem;
+        }
+        
+        .search-box i {
+            color: #888;
+        }
+        
+        /* 进度区域 */
+        .progress-area {
+            padding: 15px 25px;
+            background: #e8f4ff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #d0e3fa;
+        }
+        
+        .progress-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+        }
+        
+        .progress-bar {
+            height: 12px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            flex-grow: 1;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, #c00000 0%, #e53935 100%);
+            width: 25%;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+        
+        .question-count {
+            font-weight: 600;
+            color: #555;
+            min-width: 120px;
+            font-size: 1.05rem;
+            text-align: right;
+        }
+        
+        /* 题目区域 */
+        .question-container {
+            padding: 35px;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+        }
+        
+        .question {
+            background: white;
+            border-left: 5px solid #c00000;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        
+        .question-number {
+            font-weight: bold;
+            color: #c00000;
+            font-size: 1.25rem;
+            background: rgba(192, 0, 0, 0.08);
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+        
+        .question-text {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        .options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .option {
+            padding: 18px 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 55px;
+            display: flex;
+            align-items: center;
+            min-height: 60px;
+            background: #f9f9f9;
+        }
+        
+        .option:hover {
+            background-color: #f0f7ff;
+            border-color: #a0c4ff;
+            transform: translateX(5px);
+        }
+        
+        .option.selected {
+            background-color: #e3f2fd;
+            border-color: #4a90e2;
+            box-shadow: 0 2px 8px rgba(74, 144, 226, 0.2);
+        }
+        
+        .option.correct {
+            background-color: #e8f5e9;
+            border-color: #66bb6a;
+        }
+        
+        .option.incorrect {
+            background-color: #ffebee;
+            border-color: #ef5350;
+        }
+        
+        .option input {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+        }
+        
+        .option-label {
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #444;
+        }
+        
+        .answer-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            display: none;
+            border-left: 3px solid #4caf50;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .answer-section.show {
+            display: block;
+        }
+        
+        .answer-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+        
+        .answer-title i {
+            margin-right: 10px;
+            color: #4caf50;
+            font-size: 1.3rem;
+        }
+        
+        .correct-answer {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1.15rem;
+            margin: 5px 0;
+            display: block;
+        }
+        
+        .explanation {
+            margin-top: 15px;
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            border-left: 3px solid #2196f3;
+        }
+        
+        /* 按钮区域 */
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .btn-prev {
+            background: #5c6bc0;
+            color: white;
+        }
+        
+        .btn-prev:hover:not(:disabled) {
+            background: #3f51b5;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(92, 107, 192, 0.3);
+        }
+        
+        .btn-submit {
+            background: linear-gradient(90deg, #c00000 0%, #e53935 100%);
+            color: white;
+        }
+        
+        .btn-submit:hover:not(:disabled) {
+            background: linear-gradient(90deg, #a00000 0%, #d32f2f 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(192, 0, 0, 0.25);
+        }
+        
+        .btn-next {
+            background: linear-gradient(90deg, #43a047 0%, #66bb6a 100%);
+            color: white;
+        }
+        
+        .btn-next:hover:not(:disabled) {
+            background: linear-gradient(90deg, #388e3c 0%, #4caf50 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(67, 160, 71, 0.3);
+        }
+        
+        /* 底部样式 */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #f1f3f5;
+            color: #666;
+            border-top: 1px solid #e9ecef;
+            font-size: 0.95rem;
+        }
+        
+        .logo {
+            font-weight: bold;
+            color: #c00000;
+            font-size: 1.15rem;
+            margin-top: 10px;
+            letter-spacing: 1px;
+        }
+        
+        .copyright {
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+        
+        /* 题目导航面板样式 */
+        .questions-panel {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            overflow: hidden;
+            display: none;
+        }
+        
+        .questions-panel.show {
+            display: block;
+            animation: slideIn 0.4s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translate(-50%, -40%); }
+            to { opacity: 1; transform: translate(-50%, -50%); }
+        }
+        
+        .panel-header {
+            background: linear-gradient(90deg, #8b0000 0%, #c00000 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .panel-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .close-panel {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .close-panel:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .questions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+            gap: 12px;
+            padding: 25px;
+            overflow-y: auto;
+            max-height: 60vh;
+        }
+        
+        .question-item {
+            width: 100%;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f4f8;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .question-item:hover {
+            background: #dde7f5;
+            transform: scale(1.05);
+        }
+        
+        .question-item.answered {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .question-item.current {
+            border-color: #c00000;
+            background: #ffecec;
+            color: #c00000;
+            box-shadow: 0 0 0 3px rgba(192, 0, 0, 0.2);
+            transform: scale(1.1);
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 999;
+            display: none;
+        }
+        
+        .overlay.show {
+            display: block;
+            animation: fadeInOverlay 0.3s ease;
+        }
+        
+        @keyframes fadeInOverlay {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                margin: 15px auto;
+            }
+            
+            header {
+                padding: 20px 15px;
+            }
+            
+            header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .header-icon {
+                display: none;
+            }
+            
+            .controls {
+                padding: 15px 10px;
+            }
+            
+            .search-box {
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            .question-container {
+                padding: 20px 15px;
+            }
+            
+            .question-text {
+                font-size: 1.1rem;
+            }
+            
+            .option {
+                padding: 15px 15px 15px 50px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .questions-grid {
+                grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+                gap: 8px;
+                padding: 15px;
+            }
+            
+            .question-item {
+                font-size: 0.9rem;
+            }
+        }
+        
+        .red-theme {
+            background: rgba(192, 0, 0, 0.05);
+            border-left: 5px solid #8b0000;
+        }
+        
+        .red-theme .question-number {
+            background: rgba(139, 0, 0, 0.1);
+            color: #8b0000;
+        }
+    </style>
+</head>
+<body>
+    <!-- 题目导航面板 -->
+    <div class="overlay" id="overlay"></div>
+    <div class="questions-panel" id="questions-panel">
+        <div class="panel-header">
+            <div class="panel-title">题目导航</div>
+            <button class="close-panel" id="close-panel">&times;</button>
+        </div>
+        <div class="questions-grid" id="questions-grid">
+            <!-- 题目项将通过JS动态生成 -->
+        </div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <div class="header-pattern"></div>
+            <div class="header-content">
+                <i class="fas fa-book header-icon"></i>
+                <h1>深入贯彻中央八项规定精神学习教育知识竞赛在线题库</h1>
+                <p class="subtitle">清风护航发展路 聚力共绘新蓝图——万友汽车党建联盟重庆二片区集体主题党日</p>
+            </div>
+        </header>
+        
+        <div class="controls">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="搜索题目内容或题号...">
+            </div>
+        </div>
+        
+        <div class="progress-area">
+            <div class="progress-info">
+                <div class="progress-bar">
+                    <div class="progress" id="progress-bar"></div>
+                </div>
+                <div class="question-count" id="question-count">题目 1/120</div>
+            </div>
+        </div>
+        
+        <div class="question-container">
+            <div class="question" id="question-card">
+                <div class="question-header">
+                    <div class="question-number" id="current-question">题目 1</div>
+                </div>
+                <div class="question-text" id="question-text">
+                    中央八项规定是哪一年出台的？
+                </div>
+                <div class="options" id="options-container">
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1a"> 
+                        <label for="q1a" class="option-label">A. 2012年</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1b"> 
+                        <label for="q1b" class="option-label">B. 2013年</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1c"> 
+                        <label for="q1c" class="option-label">C. 2014年</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1d"> 
+                        <label for="q1d" class="option-label">D. 2015年</label>
+                    </div>
+                </div>
+                <div class="answer-section" id="answer-section">
+                    <div class="answer-title">
+                        <i class="fas fa-check-circle"></i> 
+                        正确答案：<span class="correct-answer">A. 2012年</span>
+                    </div>
+                    <div class="explanation">
+                        解析：中央八项规定于2012年12月4日由中共中央政治局会议审议通过，是党的十八大后推进全面从严治党的第一项重要举措，聚焦改进工作作风、密切联系群众。
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn btn-prev" id="prev-btn" disabled>
+                        <i class="fas fa-arrow-left"></i>上一题
+                    </button>
+                    <button class="btn btn-submit" id="submit-btn">
+                        <i class="fas fa-paper-plane"></i>提交答案
+                    </button>
+                    <button class="btn btn-next" id="next-btn">
+                        下一题<i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>深入贯彻中央八项规定精神学习教育知识竞赛在线题库</p>
+            <div class="logo">党员干部学习平台</div>
+            <div class="copyright">© 党员干部学习平台 | 题库内容来源于中央纪委国家监委相关规定</div>
+        </footer>
+    </div>
+
+    <script>
+        // 完整的120题题库数据
+        const questions = [
+            {
+                id: 1,
+                text: "中央八项规定是哪一年出台的？",
+                options: ["A. 2012年", "B. 2013年", "C. 2014年", "D. 2015年"],
+                correct: 0,
+                explanation: "中央八项规定于2012年12月4日由中共中央政治局会议审议通过，是党的十八大后推进全面从严治党的第一项重要举措，聚焦改进工作作风、密切联系群众。"
+            },
+            {
+                id: 2,
+                text: "中央八项规定的核心内容聚焦于？",
+                options: ["A. 经济发展", "B. 党风廉政建设和作风建设", "C. 科技创新", "D. 文化繁荣"],
+                correct: 1,
+                explanation: "中央八项规定聚焦改进工作作风、密切联系群众，核心是加强党的作风建设，推进全面从严治党。"
+            },
+            {
+                id: 3,
+                text: "以下哪项不属于中央八项规定关于改进调查研究的要求？",
+                options: ["A. 深入基层、深入群众", "B. 多到困难和矛盾集中、群众意见多的地方去", "C. 安排大规模陪同队伍", "D. 轻车简从、减少陪同"],
+                correct: 2,
+                explanation: "中央八项规定要求改进调查研究要轻车简从、减少陪同，不得安排大规模陪同队伍，以免增加基层负担。"
+            },
+            {
+                id: 4,
+                text: "中央八项规定要求精简会议活动，提高会议实效，开短会、讲短话，力戒空话、（ ）",
+                options: ["A. 套话", "B. 假话", "C. 废话", "D. 大话"],
+                correct: 0,
+                explanation: "中央八项规定要求精简会议活动，提高会议实效，开短会、讲短话，力戒空话、套话。"
+            },
+            {
+                id: 5,
+                text: "关于精简文件简报，中央八项规定提出要切实改进文风，没有实质内容、（ ）的文件、简报一律不发。",
+                options: ["A. 可发可不发", "B. 内容重复", "C. 字数过多", "D. 专业性过强"],
+                correct: 0,
+                explanation: "中央八项规定要求精简文件简报，切实改进文风，没有实质内容、可发可不发的文件、简报一律不发。"
+            },
+            {
+                id: 6,
+                text: "中央八项规定要求严格控制出访活动，严格按照规定乘坐交通工具，（ ）乘坐民航包机。",
+                options: ["A. 严禁", "B. 可以", "C. 特殊情况允许", "D. 经批准后可以"],
+                correct: 0,
+                explanation: "中央八项规定要求严格控制出访活动，严禁乘坐民航包机。"
+            },
+            {
+                id: 7,
+                text: "改进警卫工作，坚持（ ）的原则，减少交通管制，一般情况下不得封路、不清场闭馆。",
+                options: ["A. 有利于联系群众", "B. 安全第一", "C. 高效便捷", "D. 严格规范"],
+                correct: 0,
+                explanation: "中央八项规定要求改进警卫工作，坚持有利于联系群众的原则，减少交通管制，一般情况下不得封路、不清场闭馆。"
+            },
+            {
+                id: 8,
+                text: "中央八项规定要求严格执行住房、车辆配备等有关工作和生活待遇的规定，（ ）超标准配备、占有住房和办公用房。",
+                options: ["A. 严禁", "B. 可以", "C. 特殊情况允许", "D. 经批准后可以"],
+                correct: 0,
+                explanation: "中央八项规定要求严格执行住房、车辆配备等有关工作和生活待遇的规定，严禁超标准配备、占有住房和办公用房。"
+            },
+            {
+                id: 9,
+                text: "中央八项规定强调要厉行勤俭节约，严格执行（ ）有关规定，严格落实各项节约措施。",
+                options: ["A. 财经纪律", "B. 保密纪律", "C. 组织纪律", "D. 群众纪律"],
+                correct: 0,
+                explanation: "中央八项规定强调要厉行勤俭节约，严格执行财经纪律有关规定，严格落实各项节约措施。"
+            },
+            {
+                id: 10,
+                text: "以下哪项不属于中央八项规定精神反对的内容？",
+                options: ["A. 形式主义", "B. 享乐主义", "C. 创新精神", "D. 奢靡之风"],
+                correct: 2,
+                explanation: "中央八项规定精神反对形式主义、官僚主义、享乐主义和奢靡之风，创新精神是鼓励的。"
+            },
+            // 题目11-20
+            {
+                id: 11,
+                text: "中央八项规定中关于改进调查研究，要求不张贴悬挂标语横幅，不安排群众迎送，不铺设迎宾地毯，不摆放花草，不安排（ ）。",
+                options: ["A. 宴请", "B. 会议", "C. 合影", "D. 专场文艺演出"],
+                correct: 3,
+                explanation: "中央八项规定要求改进调查研究，不安排专场文艺演出等增加基层负担的活动。"
+            },
+            {
+                id: 12,
+                text: "精简会议活动，要严格控制以中央名义召开的各类全国性会议和举行的重大活动，不开（ ）的会。",
+                options: ["A. 内容重复", "B. 没有实质内容", "C. 时间过长", "D. 参与人数过多"],
+                correct: 1,
+                explanation: "中央八项规定要求精简会议活动，不开没有实质内容的会议。"
+            },
+            {
+                id: 13,
+                text: "精简文件简报，要规范文件、简报报送程序和格式，提高文件、简报的（ ）。",
+                options: ["A. 数量", "B. 质量", "C. 篇幅", "D. 印发范围"],
+                correct: 1,
+                explanation: "中央八项规定要求精简文件简报，提高文件、简报的质量。"
+            },
+            {
+                id: 14,
+                text: "中央八项规定要求严格控制出访活动，严格按照规定安排出访路线，（ ）擅自改变行程。",
+                options: ["A. 严禁", "B. 可以", "C. 特殊情况允许", "D. 经批准后可以"],
+                correct: 0,
+                explanation: "中央八项规定要求严格控制出访活动，严禁擅自改变行程。"
+            },
+            {
+                id: 15,
+                text: "某国企领导下生产一线调研，发现某车间设备老化导致效率低下，职工强烈要求更换。但因年度预算已定，更换需追加资金200万元。此时领导应如何处置？",
+                options: [
+                    "A. 现场承诺立即拨款更换设备，要求财务部门'特事特办'",
+                    "B. 指示车间主任写申请报告直接报自己审批，跳过集体决策程序",
+                    "C. 要求办公室从其他项目挪用资金先行垫付，年底再补手续",
+                    "D. 责成业务部门论证必要性，按'三重一大'程序提交党委会审议"
+                ],
+                correct: 3,
+                explanation: "根据中央八项规定精神和'三重一大'决策制度，大额资金使用必须经过集体决策程序，不能个人擅自决定。"
+            },
+            {
+                id: 16,
+                text: "中央八项规定对严格文稿发表提出要求，除中央统一安排外，个人（ ）公开出版著作、讲话单行本。",
+                options: ["A. 不得", "B. 可以", "C. 特殊情况允许", "D. 经批准后可以"],
+                correct: 0,
+                explanation: "中央八项规定要求严格文稿发表，除中央统一安排外，个人不得公开出版著作、讲话单行本。"
+            },
+            {
+                id: 17,
+                text: "严格执行住房、车辆配备等有关工作和生活待遇的规定，不得违规配备、购买、更换、装饰或者使用（ ）。",
+                options: ["A. 公务用车", "B. 私家车", "C. 单位用车", "D. 租赁用车"],
+                correct: 0,
+                explanation: "中央八项规定要求严格执行公务用车管理规定，不得违规配备、购买、更换、装饰或者使用公务用车。"
+            },
+            {
+                id: 18,
+                text: "厉行勤俭节约，要严格执行国内公务接待管理规定，不得超标准接待，不得（ ）。",
+                options: ["A. 公款吃喝", "B. 安排工作餐", "C. 提供正常饮料", "D. 安排住宿"],
+                correct: 0,
+                explanation: "中央八项规定要求厉行勤俭节约，不得用公款吃喝。"
+            },
+            {
+                id: 19,
+                text: "中央八项规定精神是加强（ ）的重要抓手。",
+                options: ["A. 经济建设", "B. 政治建设", "C. 作风建设", "D. 文化建设"],
+                correct: 2,
+                explanation: "中央八项规定精神是加强作风建设的重要抓手。"
+            },
+            {
+                id: 20,
+                text: "改进调查研究，要向群众学习、向实践学习，多同群众座谈，多同干部谈心，多商量讨论，多解剖典型，多（ ）。",
+                options: ["A. 实地查看", "B. 听取汇报", "C. 查阅资料", "D. 电话询问"],
+                correct: 0,
+                explanation: "中央八项规定要求改进调查研究，要多实地查看了解真实情况。"
+            },
+            // 题目21-30
+            {
+                id: 21,
+                text: "精简会议活动，要提高会议实效，提倡（ ）开会。",
+                options: ["A. 少", "B. 短", "C. 实", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求精简会议活动，提倡少开会、开短会、开解决问题的会。"
+            },
+            {
+                id: 22,
+                text: "精简文件简报，要大力推广（ ）等方式，逐步实现无纸化办公。",
+                options: ["A. 电子公文", "B. 纸质公文", "C. 口头传达", "D. 会议传达"],
+                correct: 0,
+                explanation: "中央八项规定要求精简文件简报，大力推广电子公文等方式，逐步实现无纸化办公。"
+            },
+            {
+                id: 23,
+                text: "严格控制出访活动，出访期间，不得安排与出访任务无关的活动，不得用公款（ ）。",
+                options: ["A. 旅游", "B. 购物", "C. 娱乐", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求严格控制出访活动，不得用公款旅游、购物和娱乐。"
+            },
+            {
+                id: 24,
+                text: "国有企业商务接待中，根据中央八项规定精神，下列行为正确的是（ ）",
+                options: [
+                    "A. 以商务名义赠送高价纪念品和土特产",
+                    "B. 安排与业务无关的旅游景点参观",
+                    "C. 严格执行接待标准，不安排与商务洽谈无关的活动",
+                    "D. 在私人会所进行宴请以彰显诚意"
+                ],
+                correct: 2,
+                explanation: "中央八项规定要求国有企业商务接待要严格执行接待标准，不安排与商务洽谈无关的活动。"
+            },
+            {
+                id: 25,
+                text: "中央八项规定要求改进新闻报道，要突出（ ）、基层干部群众。",
+                options: ["A. 领导活动", "B. 会议内容", "C. 民生问题", "D. 工作成效"],
+                correct: 2,
+                explanation: "中央八项规定要求改进新闻报道，要突出民生问题、基层干部群众。"
+            },
+            {
+                id: 26,
+                text: "严格文稿发表，要严格遵守有关规定，（ ）利用职务便利为他人出版著作、发表文章等提供帮助。",
+                options: ["A. 不得", "B. 可以", "C. 特殊情况允许", "D. 经批准后可以"],
+                correct: 0,
+                explanation: "中央八项规定要求严格文稿发表，不得利用职务便利为他人出版著作、发表文章等提供帮助。"
+            },
+            {
+                id: 27,
+                text: "严格执行住房、车辆配备等有关工作和生活待遇的规定，不得违规占用（ ）住房。",
+                options: ["A. 公有", "B. 私有", "C. 集体", "D. 租赁"],
+                correct: 0,
+                explanation: "中央八项规定要求严格执行住房管理规定，不得违规占用公有住房。"
+            },
+            {
+                id: 28,
+                text: "厉行勤俭节约，要严格执行会议、培训、公务接待等经费管理规定，（ ）超预算支出。",
+                options: ["A. 严禁", "B. 可以", "C. 特殊情况允许", "D. 经批准后可以"],
+                correct: 0,
+                explanation: "中央八项规定要求厉行勤俭节约，严禁超预算支出。"
+            },
+            {
+                id: 29,
+                text: "中央八项规定精神体现了（ ）的坚定决心。",
+                options: ["A. 全面从严治党", "B. 全面深化改革", "C. 全面依法治国", "D. 全面建设社会主义现代化国家"],
+                correct: 0,
+                explanation: "中央八项规定精神体现了全面从严治党的坚定决心。"
+            },
+            {
+                id: 30,
+                text: "改进调查研究，要多到（ ）了解真实情况。",
+                options: ["A. 条件好的地方", "B. 工作先进的地方", "C. 困难和问题多的地方", "D. 交通便利的地方"],
+                correct: 2,
+                explanation: "中央八项规定要求改进调查研究，要多到困难和问题多的地方了解真实情况。"
+            },
+            // 题目31-40
+            {
+                id: 31,
+                text: "精简会议活动，要严格会议审批制度，未经批准，（ ）以党委、政府名义召开会议。",
+                options: ["A. 不得", "B. 可以", "C. 特殊情况允许", "D. 经批准后可以"],
+                correct: 0,
+                explanation: "中央八项规定要求精简会议活动，未经批准，不得以党委、政府名义召开会议。"
+            },
+            {
+                id: 32,
+                text: "精简文件简报，要严格控制文件、简报的（ ），提高文件、简报的针对性和实效性。",
+                options: ["A. 数量和篇幅", "B. 质量和数量", "C. 篇幅和质量", "D. 印发范围和数量"],
+                correct: 0,
+                explanation: "中央八项规定要求精简文件简报，严格控制文件、简报的数量和篇幅。"
+            },
+            {
+                id: 33,
+                text: "严格控制出访活动，要合理安排出访人员，严格执行出访（ ）规定。",
+                options: ["A. 天数和人数", "B. 路线和行程", "C. 经费和标准", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求严格控制出访活动，严格执行出访天数和人数、路线和行程、经费和标准等规定。"
+            },
+            {
+                id: 34,
+                text: "国有企业落实中央八项规定精神，在职工福利发放方面应（ ）",
+                options: [
+                    "A. 以现金形式发放节日补贴，提高员工积极性",
+                    "B. 将公款购买的购物卡作为年终慰问品",
+                    "C. 按工会规定标准发放法定节日福利，严禁变相滥发",
+                    "D. 超标准组织全员豪华聚餐替代福利"
+                ],
+                correct: 2,
+                explanation: "中央八项规定要求国有企业要按工会规定标准发放法定节日福利，严禁变相滥发福利。"
+            },
+            {
+                id: 35,
+                text: "改进新闻报道，要根据工作需要、新闻价值、社会效果决定是否报道，进一步（ ）报道的数量、字数、时长。",
+                options: ["A. 压缩", "B. 增加", "C. 保持", "D. 调整"],
+                correct: 0,
+                explanation: "中央八项规定要求改进新闻报道，进一步压缩报道的数量、字数、时长。"
+            },
+            {
+                id: 36,
+                text: "严格文稿发表，要严格执行有关规定，个人不得公开出版著作、讲话单行本，不发贺信、贺电，不题词、（ ）。",
+                options: ["A. 题字", "B. 签名", "C. 留念", "D. 合影"],
+                correct: 0,
+                explanation: "中央八项规定要求严格文稿发表，个人不题词、题字。"
+            },
+            {
+                id: 37,
+                text: "严格执行住房、车辆配备等有关工作和生活待遇的规定，不得违规配备、使用（ ）。",
+                options: ["A. 高档办公用品", "B. 办公设备", "C. 办公家具", "D. 办公场所"],
+                correct: 0,
+                explanation: "中央八项规定要求严格执行办公用品管理规定，不得违规配备、使用高档办公用品。"
+            },
+            {
+                id: 38,
+                text: "厉行勤俭节约，要严格执行公务接待标准，不得在接待费中列支应当由（ ）承担的费用。",
+                options: ["A. 接待对象", "B. 单位", "C. 个人", "D. 上级部门"],
+                correct: 0,
+                explanation: "中央八项规定要求厉行勤俭节约，不得在接待费中列支应当由接待对象承担的费用。"
+            },
+            {
+                id: 39,
+                text: "中央八项规定精神是密切（ ）的重要举措。",
+                options: ["A. 干群关系", "B. 政企关系", "C. 军民关系", "D. 党际关系"],
+                correct: 0,
+                explanation: "中央八项规定精神是密切干群关系的重要举措。"
+            },
+            {
+                id: 40,
+                text: "改进调查研究，要深入了解基层群众的（ ）和实际需求。",
+                options: ["A. 生活状况", "B. 思想动态", "C. 困难问题", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求改进调查研究，要深入了解基层群众的生活状况、思想动态和困难问题。"
+            },
+            // 题目41-50
+            {
+                id: 41,
+                text: "精简会议活动，要严格控制会议规模，减少参加人员，（ ）陪会现象。",
+                options: ["A. 杜绝", "B. 减少", "C. 控制", "D. 允许"],
+                correct: 0,
+                explanation: "中央八项规定要求精简会议活动，杜绝陪会现象。"
+            },
+            {
+                id: 42,
+                text: "精简文件简报，要提高文件、简报的质量，做到（ ）。",
+                options: ["A. 内容准确", "B. 条理清晰", "C. 文字精炼", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求精简文件简报，提高文件、简报质量，做到内容准确、条理清晰、文字精炼。"
+            },
+            {
+                id: 43,
+                text: "严格控制出访活动，出访人员要严格遵守外事纪律，（ ）泄露国家机密。",
+                options: ["A. 严禁", "B. 可以", "C. 特殊情况允许", "D. 经批准后可以"],
+                correct: 0,
+                explanation: "中央八项规定要求严格控制出访活动，严禁泄露国家机密。"
+            },
+            {
+                id: 44,
+                text: "改进警卫工作，要加强警卫工作信息化建设，提高警卫工作的（ ）水平。",
+                options: ["A. 科学化", "B. 规范化", "C. 现代化", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求改进警卫工作，提高警卫工作的科学化、规范化和现代化水平。"
+            },
+            {
+                id: 45,
+                text: "改进新闻报道，要注重报道基层群众的（ ）和精神风貌。",
+                options: ["A. 生产生活", "B. 工作学习", "C. 创新创造", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求改进新闻报道，注重报道基层群众的生产生活、工作学习和创新创造。"
+            },
+            {
+                id: 46,
+                text: "严格文稿发表，要严格遵守宣传纪律，（ ）擅自公开发表涉及党和国家重要工作的文章。",
+                options: ["A. 不得", "B. 可以", "C. 特殊情况允许", "D. 经批准后可以"],
+                correct: 0,
+                explanation: "中央八项规定要求严格文稿发表，不得擅自公开发表涉及党和国家重要工作的文章。"
+            },
+            {
+                id: 47,
+                text: "严格执行住房、车辆配备等有关工作和生活待遇的规定，不得违规（ ）住房和办公用房。",
+                options: ["A. 装修", "B. 出租", "C. 出借", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求严格执行住房管理规定，不得违规装修、出租、出借住房和办公用房。"
+            },
+            {
+                id: 48,
+                text: "厉行勤俭节约，要严格执行办公设备、办公用品配备标准，（ ）超标准配备。",
+                options: ["A. 严禁", "B. 可以", "C. 特殊情况允许", "D. 经批准后可以"],
+                correct: 0,
+                explanation: "中央八项规定要求厉行勤俭节约，严禁超标准配备办公设备和办公用品。"
+            },
+            {
+                id: 49,
+                text: "中央八项规定精神是推动（ ）的重要保障。",
+                options: ["A. 经济发展", "B. 社会进步", "C. 作风转变", "D. 文化繁荣"],
+                correct: 2,
+                explanation: "中央八项规定精神是推动作风转变的重要保障。"
+            },
+            {
+                id: 50,
+                text: "改进调查研究，要认真听取基层干部群众的（ ）和建议。",
+                options: ["A. 意见", "B. 诉求", "C. 想法", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求改进调查研究，认真听取基层干部群众的意见、诉求和建议。"
+            },
+            // 题目51-60
+            {
+                id: 51,
+                text: "精简会议活动，要创新会议形式，充分运用现代信息技术手段，提高会议的（ ）。",
+                options: ["A. 效率", "B. 质量", "C. 效果", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求精简会议活动，创新会议形式，提高会议的效率、质量和效果。"
+            },
+            {
+                id: 52,
+                text: "精简文件简报，要加强文件、简报的审核把关，（ ）不符合要求的文件、简报印发。",
+                options: ["A. 不得", "B. 可以", "C. 特殊情况允许", "D. 经批准后可以"],
+                correct: 0,
+                explanation: "中央八项规定要求精简文件简报，加强审核把关，不得印发不符合要求的文件、简报。"
+            },
+            {
+                id: 53,
+                text: "严格控制出访活动，出访结束后，要及时形成出访报告，报告内容要（ ）。",
+                options: ["A. 真实", "B. 准确", "C. 完整", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求严格控制出访活动，出访报告内容要真实、准确、完整。"
+            },
+            {
+                id: 54,
+                text: "改进警卫工作，要加强警卫队伍建设，提高警卫人员的（ ）素质。",
+                options: ["A. 政治", "B. 业务", "C. 作风", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求改进警卫工作，提高警卫人员的政治、业务和作风素质。"
+            },
+            {
+                id: 55,
+                text: "改进新闻报道，要增强新闻报道的（ ）和感染力。",
+                options: ["A. 吸引力", "B. 可读性", "C. 针对性", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求改进新闻报道，增强新闻报道的吸引力、可读性和感染力。"
+            },
+            {
+                id: 56,
+                text: "严格文稿发表，要严格执行有关规定，未经批准，（ ）举办个人作品展览、研讨会等活动。",
+                options: ["A. 不得", "B. 可以", "C. 特殊情况允许", "D. 经批准后可以"],
+                correct: 0,
+                explanation: "中央八项规定要求严格文稿发表，未经批准不得举办个人作品展览、研讨会等活动。"
+            },
+            {
+                id: 57,
+                text: "严格执行住房、车辆配备等有关工作和生活待遇的规定，不得违规占用（ ）资源。",
+                options: ["A. 公共", "B. 私人", "C. 集体", "D. 单位"],
+                correct: 0,
+                explanation: "中央八项规定要求严格执行工作待遇规定，不得违规占用公共资源。"
+            },
+            {
+                id: 58,
+                text: "厉行勤俭节约，要加强对经费使用的监督管理，（ ）浪费行为。",
+                options: ["A. 杜绝", "B. 减少", "C. 控制", "D. 允许"],
+                correct: 0,
+                explanation: "中央八项规定要求厉行勤俭节约，杜绝浪费行为。"
+            },
+            {
+                id: 59,
+                text: "中央八项规定精神是加强党的（ ）建设的重要内容。",
+                options: ["A. 思想", "B. 组织", "C. 作风", "D. 纪律"],
+                correct: 2,
+                explanation: "中央八项规定精神是加强党的作风建设的重要内容。"
+            },
+            {
+                id: 60,
+                text: "改进调查研究，要坚持问题导向，深入研究解决（ ）的突出问题。",
+                options: ["A. 经济发展", "B. 社会稳定", "C. 民生改善", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求改进调查研究，坚持问题导向，解决经济发展、社会稳定和民生改善中的突出问题。"
+            },
+            // 题目61-70
+            {
+                id: 61,
+                text: "精简会议活动，要严格控制会议时间，提倡开短会，一般会议不超过（ ）小时。",
+                options: ["A. 1", "B. 2", "C. 3", "D. 4"],
+                correct: 1,
+                explanation: "中央八项规定要求精简会议活动，一般会议不超过2小时。"
+            },
+            {
+                id: 62,
+                text: "精简文件简报，要推行文件、简报（ ）制度，提高文件、简报的办理效率。",
+                options: ["A. 限时办结", "B. 及时处理", "C. 定期归档", "D. 分类管理"],
+                correct: 0,
+                explanation: "中央八项规定要求精简文件简报，推行限时办结制度。"
+            },
+            {
+                id: 63,
+                text: "严格控制出访活动，要加强出访计划管理，合理安排出访时间和任务，避免（ ）出访。",
+                options: ["A. 重复", "B. 频繁", "C. 无意义", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求严格控制出访活动，避免重复、频繁和无意义的出访。"
+            },
+            {
+                id: 64,
+                text: "改进警卫工作，要加强与相关部门的协作配合，形成（ ）的警卫工作格局。",
+                options: ["A. 齐抓共管", "B. 各司其职", "C. 协同联动", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求改进警卫工作，形成齐抓共管、各司其职、协同联动的警卫工作格局。"
+            },
+            {
+                id: 65,
+                text: "改进新闻报道，要创新新闻报道方式方法，运用（ ）等新媒体手段，扩大新闻报道的影响力。",
+                options: ["A. 微博", "B. 微信", "C. 客户端", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求改进新闻报道，创新方式方法，运用微博、微信、客户端等新媒体手段。"
+            },
+            {
+                id: 66,
+                text: "严格文稿发表，要严格执行有关规定，个人不得在企业兼职取酬，不得利用职务便利为（ ）谋取利益。",
+                options: ["A. 亲属和其他特定关系人", "B. 朋友", "C. 同事", "D. 同学"],
+                correct: 0,
+                explanation: "中央八项规定要求严格文稿发表，不得利用职务便利为亲属和其他特定关系人谋取利益。"
+            },
+            {
+                id: 67,
+                text: "严格执行住房、车辆配备等有关工作和生活待遇的规定，不得违规（ ）车辆。",
+                options: ["A. 购置", "B. 租赁", "C. 借用", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求严格执行车辆管理规定，不得违规购置、租赁和借用车辆。"
+            },
+            {
+                id: 68,
+                text: "厉行勤俭节约，要加强对办公用品、耗材的管理，（ ）浪费现象。",
+                options: ["A. 防止", "B. 减少", "C. 控制", "D. 允许"],
+                correct: 0,
+                explanation: "中央八项规定要求厉行勤俭节约，防止办公用品和耗材的浪费现象。"
+            },
+            {
+                id: 69,
+                text: "中央八项规定精神是密切党同人民群众（ ）的桥梁和纽带。",
+                options: ["A. 联系", "B. 关系", "C. 感情", "D. 互动"],
+                correct: 0,
+                explanation: "中央八项规定精神是密切党同人民群众联系的桥梁和纽带。"
+            },
+            {
+                id: 70,
+                text: "改进调查研究，要深入基层一线，（ ）了解实际情况。",
+                options: ["A. 全面", "B. 深入", "C. 真实", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求改进调查研究，深入基层一线全面、深入、真实地了解实际情况。"
+            },
+            // 题目71-80
+            {
+                id: 71,
+                text: "精简会议活动，要严格控制会议数量，能不开的坚决不开，能合并的坚决合并，（ ）不必要的会议。",
+                options: ["A. 减少", "B. 杜绝", "C. 控制", "D. 允许"],
+                correct: 1,
+                explanation: "中央八项规定要求精简会议活动，杜绝不必要的会议。"
+            },
+            {
+                id: 72,
+                text: "精简文件简报，要严格控制文件、简报的印发范围，（ ）随意扩大印发范围。",
+                options: ["A. 不得", "B. 可以", "C. 特殊情况允许", "D. 经批准后可以"],
+                correct: 0,
+                explanation: "中央八项规定要求精简文件简报，不得随意扩大印发范围。"
+            },
+            {
+                id: 73,
+                text: "严格控制出访活动，要加强出访经费管理，严格执行出访经费（ ）规定。",
+                options: ["A. 预算和开支", "B. 报销和审批", "C. 使用和监督", "D. 以上都是"],
+                correct: 3,
+                explanation: "中央八项规定要求严格控制出访活动，加强出访经费的预算、开支、报销、审批和使用监督。"
+            },
+            {
+                id: 74,
+                text: "某单位在召开会议时，违规发放纪念品，这违反了中央八项规定中（ ）的要求。",
+                options: ["A. 精简会议活动", "B. 厉行勤俭节约", "C. 改进新闻报道", "D. 严格文稿发表"],
+                correct: 1,
+                explanation: "中央八项规定要求厉行勤俭节约，违规发放纪念品违反了这一要求。"
+            },
+            {
+                id: 75,
+                text: "党员干部王某在公务接待中，超标准安排高档酒水，其行为违背了中央八项规定关于（ ）的规定。",
+                options: ["A. 严格执行住房、车辆配备", "B. 厉行勤俭节约", "C. 改进调查研究", "D. 精简文件简报"],
+                correct: 1,
+                explanation: "中央八项规定要求厉行勤俭节约，超标准安排高档酒水违反了这一规定。"
+            },
+            {
+                id: 76,
+                text: "下列哪项属于形式主义在落实中央八项规定中的表现？",
+                options: [
+                    "A. 调研时深入基层了解实际困难",
+                    "B. 以会议落实会议，文件落实文件",
+                    "C. 严格控制会议规模和时长",
+                    "D. 规范公务接待标准"
+                ],
+                correct: 1,
+                explanation: "以会议落实会议，文件落实文件是形式主义的典型表现。"
+            },
+            {
+                id: 77,
+                text: "中央八项规定精神学习教育中的开门教育要求，强调要（ ）。",
+                options: ["A. 闭门造车开展学习", "B. 广泛听取群众意见和建议", "C. 只在内部进行讨论学习", "D. 减少与外界交流"],
+                correct: 1,
+                explanation: "开门教育要求广泛听取群众意见和建议。"
+            },
+            {
+                id: 78,
+                text: "在国企中落实中央八项规定精神，应重点加强对（ ）的监督管理。",
+                options: ["A. 项目招投标、物资采购等关键环节", "B. 员工日常考勤", "C. 企业文化建设", "D. 员工技能培训"],
+                correct: 0,
+                explanation: "在国企中落实中央八项规定精神，应重点加强对项目招投标、物资采购等关键环节的监督管理。"
+            },
+            {
+                id: 79,
+                text: "某干部在办公用房使用中，违规多占用一间办公室作为休息室，这违反了中央八项规定关于（ ）的规定。",
+                options: ["A. 严格执行住房、车辆配备等工作和生活待遇", "B. 厉行勤俭节约", "C. 改进调查研究", "D. 精简会议活动"],
+                correct: 0,
+                explanation: "违规多占用办公用房违反了严格执行工作待遇的规定。"
+            },
+            {
+                id: 80,
+                text: "中央八项规定要求改进新闻报道，对于一般性工作会议和活动，（ ）。",
+                options: ["A. 要重点突出报道", "B. 可根据情况适当减少报道篇幅和时长", "C. 必须进行全方位报道", "D. 不允许报道"],
+                correct: 1,
+                explanation: "中央八项规定要求改进新闻报道，对于一般性工作会议和活动，可适当减少报道篇幅和时长。"
+            },
+            // 题目81-90
+            {
+                id: 81,
+                text: "党员干部带头落实中央八项规定精神，首先要做到（ ）。",
+                options: ["A. 对他人严格要求，对自己放松标准", "B. 从自身做起，以身作则", "C. 只在表面上应付", "D. 等待上级督促检查"],
+                correct: 1,
+                explanation: "党员干部带头落实中央八项规定精神，要从自身做起，以身作则。"
+            },
+            {
+                id: 82,
+                text: "下列关于中央八项规定中精简文件简报的说法，错误的是（ ）。",
+                options: ["A. 提高文件、简报的质量", "B. 增加文件、简报的数量以体现工作成果", "C. 大力推广电子公文", "D. 严格控制文件、简报的印发范围"],
+                correct: 1,
+                explanation: "增加文件、简报的数量不符合中央八项规定精简文件简报的要求。"
+            },
+            {
+                id: 83,
+                text: "某单位在组织培训时，安排在豪华酒店进行，并违规组织旅游活动，这违反了中央八项规定关于（ ）的要求。",
+                options: ["A. 精简会议活动", "B. 厉行勤俭节约", "C. 改进调查研究", "D. 严格文稿发表"],
+                correct: 1,
+                explanation: "违规组织旅游活动违反了厉行勤俭节约的要求。"
+            },
+            {
+                id: 84,
+                text: "官僚主义在落实中央八项规定中的典型表现是（ ）。",
+                options: [
+                    "A. 密切联系群众，倾听群众呼声",
+                    "B. 高高在上，脱离实际，漠视群众利益",
+                    "C. 严格遵守各项纪律规定",
+                    "D. 积极主动为群众解决问题"
+                ],
+                correct: 1,
+                explanation: "高高在上，脱离实际，漠视群众利益是官僚主义的典型表现。"
+            },
+            {
+                id: 85,
+                text: "在国企中，为落实中央八项规定精神，应建立健全（ ）机制。",
+                options: ["A. 监督检查和责任追究", "B. 员工福利发放", "C. 产品销售激励", "D. 员工晋升"],
+                correct: 0,
+                explanation: "为落实中央八项规定精神，应建立健全监督检查和责任追究机制。"
+            },
+            {
+                id: 86,
+                text: "中央八项规定要求严格控制出访活动，出访人员应严格遵守（ ）。",
+                options: ["A. 外事纪律和财务纪律", "B. 工作纪律和保密纪律", "C. 组织纪律和群众纪律", "D. 生活纪律和廉洁纪律"],
+                correct: 0,
+                explanation: "中央八项规定要求出访人员严格遵守外事纪律和财务纪律。"
+            },
+            {
+                id: 87,
+                text: "党员干部在落实中央八项规定精神过程中，发现身边同事有违规行为，应（ ）。",
+                options: ["A. 视而不见", "B. 及时提醒、劝阻，并按规定报告", "C. 包庇隐瞒", "D. 参与其中"],
+                correct: 1,
+                explanation: "党员干部发现违规行为应及时提醒、劝阻，并按规定报告。"
+            },
+            {
+                id: 88,
+                text: "下列行为符合中央八项规定关于改进调查研究要求的是（ ）。",
+                options: [
+                    "A. 提前安排好调研路线和受访对象",
+                    "B. 带着问题深入基层，自主选择调研对象",
+                    "C. 调研时大量安排当地干部陪同",
+                    "D. 只听汇报，不实地查看"
+                ],
+                correct: 1,
+                explanation: "带着问题深入基层，自主选择调研对象符合改进调查研究的要求。"
+            },
+            {
+                id: 89,
+                text: "中央八项规定精神学习教育中，开展开门教育的目的是（ ）。",
+                options: [
+                    "A. 增加学习教育的难度",
+                    "B. 提升党员干部的理论水平",
+                    "C. 确保学习教育取得实效，密切联系群众",
+                    "D. 完成上级布置的任务"
+                ],
+                correct: 2,
+                explanation: "开门教育的目的是确保学习教育取得实效，密切联系群众。"
+            },
+            {
+                id: 90,
+                text: "在国企中，落实中央八项规定精神要加强对领导干部（ ）的管理。",
+                options: ["A. 八小时之外的社交圈、生活圈", "B. 工作时间的工作效率", "C. 办公电脑使用情况", "D. 考勤打卡记录"],
+                correct: 0,
+                explanation: "落实中央八项规定精神要加强对领导干部八小时之外的社交圈、生活圈的管理。"
+            },
+            // 题目91-100
+            {
+                id: 91,
+                text: "某部门在撰写文件时，大量堆砌华丽辞藻，内容空洞无物，这违反了中央八项规定关于（ ）的要求。",
+                options: ["A. 精简文件简报，改进文风", "B. 精简会议活动", "C. 厉行勤俭节约", "D. 改进调查研究"],
+                correct: 0,
+                explanation: "文件内容空洞无物违反了精简文件简报、改进文风的要求。"
+            },
+            {
+                id: 92,
+                text: "中央八项规定要求改进警卫工作，减少交通管制，是为了（ ）。",
+                options: ["A. 节省警卫成本", "B. 方便领导出行", "C. 最大限度方便群众", "D. 提高警卫工作效率"],
+                correct: 2,
+                explanation: "减少交通管制是为了最大限度方便群众。"
+            },
+            {
+                id: 93,
+                text: "党员干部落实中央八项规定精神，需要不断加强（ ）。",
+                options: [
+                    "A. 理论学习和自我约束",
+                    "B. 物质享受和生活品质追求",
+                    "C. 权力寻租和利益输送",
+                    "D. 表面文章和形式主义做法"
+                ],
+                correct: 0,
+                explanation: "党员干部落实中央八项规定精神需要不断加强理论学习和自我约束。"
+            },
+            {
+                id: 94,
+                text: "国企在公务接待中，严格按照标准执行，不搞超规格接待，这体现了中央八项规定的（ ）要求。",
+                options: ["A. 厉行勤俭节约", "B. 精简会议活动", "C. 改进新闻报道", "D. 严格文稿发表"],
+                correct: 0,
+                explanation: "不搞超规格接待体现了厉行勤俭节约的要求。"
+            },
+            {
+                id: 95,
+                text: "以下哪种情况属于违反中央八项规定关于严格文稿发表的规定？",
+                options: [
+                    "A. 按规定程序发表与工作相关的文章",
+                    "B. 未经批准，个人公开出版著作并收取报酬",
+                    "C. 发表经过审核的宣传稿件",
+                    "D. 撰写符合要求的工作总结报告"
+                ],
+                correct: 1,
+                explanation: "未经批准个人公开出版著作并收取报酬违反了严格文稿发表的规定。"
+            },
+            {
+                id: 96,
+                text: "中央八项规定精神学习教育中，开门教育需要做到（ ）。",
+                options: ["A. 拒绝群众参与", "B. 接受群众监督，听取群众意见", "C. 仅在内部公示学习成果", "D. 不公开学习计划"],
+                correct: 1,
+                explanation: "开门教育需要接受群众监督，听取群众意见。"
+            },
+            {
+                id: 97,
+                text: "在国企中推进中央八项规定精神落实，要将其与（ ）相结合。",
+                options: ["A. 企业生产经营管理", "B. 员工休假制度", "C. 办公用品采购", "D. 办公区域划分"],
+                correct: 0,
+                explanation: "在国企中落实中央八项规定精神要与企业生产经营管理相结合。"
+            },
+            {
+                id: 98,
+                text: "某领导干部在参加会议时，频繁安排工作人员送茶倒水、整理文件，这种行为属于（ ）的表现。",
+                options: ["A. 形式主义", "B. 官僚主义", "C. 享乐主义", "D. 奢靡之风"],
+                correct: 1,
+                explanation: "频繁安排工作人员服务是官僚主义的表现。"
+            },
+            {
+                id: 99,
+                text: "中央八项规定要求严格执行住房、车辆配备等规定，目的是（ ）。",
+                options: [
+                    "A. 限制干部生活待遇",
+                    "B. 防止干部利用职权谋取不正当利益",
+                    "C. 减少财政支出",
+                    "D. 规范干部日常行为"
+                ],
+                correct: 1,
+                explanation: "严格执行工作待遇规定的目的是防止干部利用职权谋取不正当利益。"
+            },
+            {
+                id: 100,
+                text: "党员干部在落实中央八项规定精神过程中，要坚决抵制（ ）。",
+                options: ["A. 错误思想和行为", "B. 正常的工作批评", "C. 合理的工作建议", "D. 必要的工作检查"],
+                correct: 0,
+                explanation: "党员干部在落实中央八项规定精神过程中要坚决抵制错误思想和行为。"
+            },
+            // 题目101-110 (綦江红色知识)
+            {
+                id: 101,
+                text: "中央红军长征途中在綦江的主要战略目的是（ ）",
+                options: ["A. 建立长期根据地", "B. 掩护主力部队向赤水进军", "C. 与红二方面军会师", "D. 开展土地改革"],
+                correct: 1,
+                explanation: "中央红军长征途中在綦江的主要战略目的是掩护主力部队向赤水进军，确保红军主力的战略转移。"
+            },
+            {
+                id: 102,
+                text: "綦江境内现存的长征遗迹'红军洞'位于（ ）",
+                options: ["A. 古剑山", "B. 石壕镇苗儿山麓", "C. 老瀛山", "D. 横山镇"],
+                correct: 1,
+                explanation: "綦江境内现存的长征遗迹'红军洞'位于石壕镇苗儿山麓。"
+            },
+            {
+                id: 103,
+                text: "1935年红军在綦江发布的著名标语是（ ）",
+                options: ["A. '打过长江去'", "B. '打倒军阀分田地'", "C. '解放全中国'", "D. '建立苏维埃'"],
+                correct: 1,
+                explanation: "1935年红军在綦江发布的著名标语是'打倒军阀分田地'。"
+            },
+            {
+                id: 104,
+                text: "王良同志的籍贯是（ ）",
+                options: ["A. 重庆渝中", "B. 綦江永城镇", "C. 江津白沙", "D. 涪陵李渡"],
+                correct: 1,
+                explanation: "王良同志是綦江永城镇人。"
+            },
+            {
+                id: 105,
+                text: "王良在红军时期担任的最高职务是（ ）",
+                options: ["A. 红三军团参谋长", "B. 红四军军长", "C. 红一师师长", "D. 中央军委委员"],
+                correct: 1,
+                explanation: "王良在红军时期担任的最高职务是红四军军长。"
+            },
+            {
+                id: 106,
+                text: "王良的黄埔军校同期同学包括（ ）",
+                options: ["A. 林彪、徐向前", "B. 林彪、刘志丹", "C. 粟裕、陈赓", "D. 聂荣臻、叶剑英"],
+                correct: 1,
+                explanation: "王良的黄埔军校同期同学包括林彪、刘志丹等。"
+            },
+            {
+                id: 107,
+                text: "王良在行军途中因口渴挖百姓红薯后采取的行动是（ ）",
+                options: [
+                    "A. 留下银元压在地头",
+                    "B. 写信致歉并附钱币",
+                    "C. 要求部队补偿双倍",
+                    "D. 亲自登门偿还"
+                ],
+                correct: 1,
+                explanation: "王良在挖百姓红薯后写信致歉并附钱币补偿。"
+            },
+            {
+                id: 108,
+                text: "王良拒绝特殊待遇的典型事例是（ ）",
+                options: [
+                    "A. 退还战斗缴获的毛毯",
+                    "B. 与战士同吃野菜粥",
+                    "C. 不住指挥部选住草棚",
+                    "D. 拒收群众慰问粮食"
+                ],
+                correct: 1,
+                explanation: "王良拒绝特殊待遇的典型事例是与战士同吃野菜粥。"
+            },
+            {
+                id: 109,
+                text: "王良整顿部队纪律的核心要求是（ ）",
+                options: ["A. 加强军事训练", "B. '不拿群众一针一线'", "C. 精简指挥层级", "D. 优化作战装备"],
+                correct: 1,
+                explanation: "王良整顿部队纪律的核心要求是'不拿群众一针一线'。"
+            },
+            {
+                id: 110,
+                text: "綦江'王良同志纪念馆'门楣题词出自（ ）",
+                options: ["A. 毛泽东", "B. 周恩来", "C. 朱德", "D. 邓小平"],
+                correct: 1,
+                explanation: "綦江'王良同志纪念馆'门楣题词出自周恩来同志。"
+            },
+            // 题目111-120 (綦江红色知识)
+            {
+                id: 111,
+                text: "当代綦江弘扬王良精神的活动是（ ）",
+                options: ["A. 红军长征论坛", "B. '廉洁綦江'主题教育", "C. 红色旅游文化节", "D. 国防教育月"],
+                correct: 1,
+                explanation: "当代綦江弘扬王良精神的活动是'廉洁綦江'主题教育。"
+            },
+            {
+                id: 112,
+                text: "红军过綦江时在石壕镇牺牲的最高职务者是（ ）",
+                options: ["A. 营长", "B. 司务长", "C. 连长", "D. 排长"],
+                correct: 1,
+                explanation: "红军过綦江时在石壕镇牺牲的最高职务者是司务长。"
+            },
+            {
+                id: 113,
+                text: "王良在第一次反'围剿'中的关键战功是（ ）",
+                options: [
+                    "A. 指挥黄洋界保卫战",
+                    "B. 活捉国民党师长张辉瓒",
+                    "C. 突破湘江封锁线",
+                    "D. 攻占吉安城"
+                ],
+                correct: 1,
+                explanation: "王良在第一次反'围剿'中的关键战功是活捉国民党师长张辉瓒。"
+            },
+            {
+                id: 114,
+                text: "下列非綦江红色遗址的是（ ）",
+                options: ["A. 红军桥", "B. 红军烈士墓", "C. 渣滓洞集中营", "D. 红军指挥部旧址"],
+                correct: 2,
+                explanation: "渣滓洞集中营位于重庆沙坪坝，非綦江红色遗址。"
+            },
+            {
+                id: 115,
+                text: "王良'红薯事件'体现的廉政精神本质是（ ）",
+                options: ["A. 艰苦奋斗", "B. 公私分明", "C. 勤俭节约", "D. 联系群众"],
+                correct: 1,
+                explanation: "王良'红薯事件'体现的廉政精神本质是公私分明。"
+            },
+            {
+                id: 116,
+                text: "与王良廉洁治军理念直接相关的当代要求是（ ）",
+                options: ["A. 轻车简从调研", "B. 严格执行公务接待标准", "C. 精简文件简报", "D. 规范出访活动"],
+                correct: 1,
+                explanation: "与王良廉洁治军理念直接相关的当代要求是严格执行公务接待标准。"
+            },
+            {
+                id: 117,
+                text: "綦江红色文化资源的独特性在于（ ）",
+                options: [
+                    "A. 川陕革命根据地核心区",
+                    "B. 中央红军长征在重庆唯一过境地",
+                    "C. 八路军办事处驻地",
+                    "D. 西南局领导机关旧址"
+                ],
+                correct: 1,
+                explanation: "綦江红色文化资源的独特性在于它是中央红军长征在重庆唯一过境地。"
+            },
+            {
+                id: 118,
+                text: "王良故居'弘毅居'牌匾寓意出自（ ）",
+                options: ["A. 《孙子兵法》", "B. 《论语》", "C. 《道德经》", "D. 《朱子家训》"],
+                correct: 1,
+                explanation: "王良故居'弘毅居'牌匾寓意出自《论语》中的'士不可以不弘毅'。"
+            },
+            {
+                id: 119,
+                text: "綦江开展'王良精神进校园'的核心内容是（ ）",
+                options: ["A. 军事技能培训", "B. 革命故事宣讲", "C. 廉洁意识启蒙", "D. 历史考据研究"],
+                correct: 2,
+                explanation: "綦江开展'王良精神进校园'的核心内容是廉洁意识启蒙。"
+            },
+            {
+                id: 120,
+                text: "传承王良精神对党员干部的核心启示是（ ）",
+                options: ["A. 提升作战指挥能力", "B. 严守纪律底线", "C. 创新工作方法", "D. 加强理论学习"],
+                correct: 1,
+                explanation: "传承王良精神对党员干部的核心启示是严守纪律底线。"
+            }
+        ];
+
+        // 当前题目索引
+        let currentQuestionIndex = 0;
+        let selectedOption = -1;
+        let answerSubmitted = false;
+        let answeredQuestions = new Set(); // 记录已回答的题目
+
+        // DOM元素
+        const questionText = document.getElementById('question-text');
+        const optionsContainer = document.getElementById('options-container');
+        const answerSection = document.getElementById('answer-section');
+        const submitBtn = document.getElementById('submit-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const currentQuestionElement = document.getElementById('current-question');
+        const questionCountElement = document.getElementById('question-count');
+        const progressBar = document.getElementById('progress-bar');
+        const questionsPanel = document.getElementById('questions-panel');
+        const overlay = document.getElementById('overlay');
+        const closePanel = document.getElementById('close-panel');
+        const questionsGrid = document.getElementById('questions-grid');
+        const searchInput = document.getElementById('search-input');
+        const questionCard = document.getElementById('question-card');
+
+        // 初始化 - 尝试从localStorage加载上次访问的题目
+        function init() {
+            const lastQuestionIndex = localStorage.getItem('lastQuestionIndex');
+            if (lastQuestionIndex !== null) {
+                currentQuestionIndex = parseInt(lastQuestionIndex);
+            }
+            
+            // 加载已答题目
+            const savedAnswered = localStorage.getItem('answeredQuestions');
+            if (savedAnswered) {
+                answeredQuestions = new Set(JSON.parse(savedAnswered));
+            }
+            
+            renderQuestion(currentQuestionIndex);
+        }
+
+        // 渲染题目
+        function renderQuestion(index) {
+            const question = questions[index];
+            currentQuestionElement.textContent = `题目 ${question.id}`;
+            questionText.textContent = question.text;
+            questionCountElement.textContent = `题目 ${index + 1}/${questions.length}`;
+            
+            // 更新进度条
+            progressBar.style.width = `${((index + 1) / questions.length) * 100}%`;
+            
+            // 清空选项容器
+            optionsContainer.innerHTML = '';
+            
+            // 添加选项
+            question.options.forEach((option, i) => {
+                const optionElement = document.createElement('div');
+                optionElement.className = 'option';
+                if (i === selectedOption) {
+                    optionElement.classList.add('selected');
+                }
+                
+                optionElement.innerHTML = `
+                    <input type="radio" name="q${question.id}" id="q${question.id}o${i}">
+                    <label for="q${question.id}o${i}" class="option-label">${option}</label>
+                `;
+                
+                optionElement.addEventListener('click', () => {
+                    if (answerSubmitted) return;
+                    
+                    // 移除之前的选择
+                    document.querySelectorAll('.option').forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+                    
+                    // 设置当前选择
+                    optionElement.classList.add('selected');
+                    selectedOption = i;
+                });
+                
+                optionsContainer.appendChild(optionElement);
+            });
+            
+            // 重置答案区域
+            answerSection.classList.remove('show');
+            answerSection.innerHTML = `
+                <div class="answer-title">
+                    <i class="fas fa-check-circle"></i> 
+                    正确答案：<span class="correct-answer">${question.options[question.correct]}</span>
+                </div>
+                <div class="explanation">
+                    ${question.explanation}
+                </div>
+            `;
+            
+            // 重置状态
+            answerSubmitted = false;
+            selectedOption = -1;
+            
+            // 更新按钮状态
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === questions.length - 1;
+            
+            // 如果此题已答过，显示答案
+            if (answeredQuestions.has(question.id)) {
+                showAnswer();
+            }
+            
+            // 根据题目ID设置主题
+            if (question.id >= 101) {
+                questionCard.classList.add('red-theme');
+            } else {
+                questionCard.classList.remove('red-theme');
+            }
+        }
+
+        // 显示答案
+        function showAnswer() {
+            answerSection.classList.add('show');
+            
+            // 标记正确和错误的选项
+            const options = document.querySelectorAll('.option');
+            options.forEach((option, i) => {
+                if (i === selectedOption) {
+                    option.classList.add(selectedOption === questions[currentQuestionIndex].correct ? 'correct' : 'incorrect');
+                } else if (i === questions[currentQuestionIndex].correct) {
+                    option.classList.add('correct');
+                }
+            });
+            
+            answerSubmitted = true;
+        }
+
+        // 提交答案
+        submitBtn.addEventListener('click', () => {
+            if (selectedOption === -1) {
+                alert('请选择一个答案！');
+                return;
+            }
+            
+            if (answerSubmitted) return;
+            
+            showAnswer();
+            
+            // 记录已回答的题目
+            answeredQuestions.add(questions[currentQuestionIndex].id);
+            localStorage.setItem('answeredQuestions', JSON.stringify(Array.from(answeredQuestions)));
+        });
+
+        // 上一题
+        prevBtn.addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                renderQuestion(currentQuestionIndex);
+                saveCurrentPosition();
+            }
+        });
+
+        // 下一题
+        nextBtn.addEventListener('click', () => {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                renderQuestion(currentQuestionIndex);
+                saveCurrentPosition();
+            }
+        });
+
+        // 保存当前位置
+        function saveCurrentPosition() {
+            localStorage.setItem('lastQuestionIndex', currentQuestionIndex);
+        }
+
+        // 显示题目导航面板
+        searchInput.addEventListener('click', () => {
+            overlay.classList.add('show');
+            questionsPanel.classList.add('show');
+            renderQuestionsGrid();
+        });
+
+        // 关闭题目导航面板
+        closePanel.addEventListener('click', closeQuestionsPanel);
+        overlay.addEventListener('click', closeQuestionsPanel);
+        
+        function closeQuestionsPanel() {
+            overlay.classList.remove('show');
+            questionsPanel.classList.remove('show');
+        }
+
+        // 渲染题目导航网格
+        function renderQuestionsGrid() {
+            questionsGrid.innerHTML = '';
+            
+            questions.forEach((question, index) => {
+                const questionItem = document.createElement('div');
+                questionItem.className = 'question-item';
+                questionItem.textContent = question.id;
+                
+                // 标记当前题目
+                if (index === currentQuestionIndex) {
+                    questionItem.classList.add('current');
+                }
+                
+                // 标记已答题目
+                if (answeredQuestions.has(question.id)) {
+                    questionItem.classList.add('answered');
+                }
+                
+                questionItem.addEventListener('click', () => {
+                    currentQuestionIndex = index;
+                    renderQuestion(currentQuestionIndex);
+                    saveCurrentPosition();
+                    closeQuestionsPanel();
+                });
+                
+                questionsGrid.appendChild(questionItem);
+            });
+        }
+
+        // 搜索题目
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            if (searchTerm.length === 0) return;
+            
+            // 尝试按题号搜索
+            if (/^\d+$/.test(searchTerm)) {
+                const questionId = parseInt(searchTerm);
+                const foundIndex = questions.findIndex(q => q.id === questionId);
+                if (foundIndex !== -1) {
+                    currentQuestionIndex = foundIndex;
+                    renderQuestion(currentQuestionIndex);
+                    saveCurrentPosition();
+                    return;
+                }
+            }
+            
+            // 按内容搜索
+            const foundIndex = questions.findIndex(q => 
+                q.text.toLowerCase().includes(searchTerm) || 
+                q.explanation.toLowerCase().includes(searchTerm)
+            );
+            
+            if (foundIndex !== -1) {
+                currentQuestionIndex = foundIndex;
+                renderQuestion(currentQuestionIndex);
+                saveCurrentPosition();
+            }
+        });
+
+        // 页面卸载时保存当前题目位置
+        window.addEventListener('beforeunload', saveCurrentPosition);
+        
+        // 初始化页面
+        init();
+    </script>
+</body>
+</html>
